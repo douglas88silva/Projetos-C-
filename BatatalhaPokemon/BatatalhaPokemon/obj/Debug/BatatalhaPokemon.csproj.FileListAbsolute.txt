@@ -1,0 +1,8 @@
+C:\AulaCsharp\BatatalhaPokemon\BatatalhaPokemon\bin\Debug\BatatalhaPokemon.exe.config
+C:\AulaCsharp\BatatalhaPokemon\BatatalhaPokemon\bin\Debug\BatatalhaPokemon.exe
+C:\AulaCsharp\BatatalhaPokemon\BatatalhaPokemon\bin\Debug\BatatalhaPokemon.pdb
+C:\AulaCsharp\BatatalhaPokemon\BatatalhaPokemon\obj\Debug\BatatalhaPokemon.csprojAssemblyReference.cache
+C:\AulaCsharp\BatatalhaPokemon\BatatalhaPokemon\obj\Debug\BatatalhaPokemon.csproj.CoreCompileInputs.cache
+C:\AulaCsharp\BatatalhaPokemon\BatatalhaPokemon\obj\Debug\BatatalhaPokemon.exe
+C:\AulaCsharp\BatatalhaPokemon\BatatalhaPokemon\obj\Debug\BatatalhaPokemon.pdb
+C:\AulaCsharp\BatatalhaPokemon\BatatalhaPokemon\bin\Debug\listaPokemon
