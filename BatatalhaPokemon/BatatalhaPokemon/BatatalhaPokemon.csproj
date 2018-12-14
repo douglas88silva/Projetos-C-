@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Controller\JogoController.cs" />
     <Compile Include="DAO\CarregaDadosTXT.cs" />
+    <Compile Include="Modelos\Jogo\Duelo.cs" />
     <Compile Include="Modelos\Jogo\Jogador.cs" />
     <Compile Include="Modelos\Jogo\CarD.cs" />
     <Compile Include="Modelos\Jogo\Ginasio.cs" />

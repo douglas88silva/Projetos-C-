@@ -13,15 +13,10 @@ namespace BatatalhaPokemon
         static void Main(string[] args)
         {
 
-            //List<CarD> lista = CarregaDadosTXT.CarregarPokemons();  
-            
+            JogoController batalhaCartasPokemon = null;
+            batalhaCartasPokemon = new JogoController();
+            batalhaCartasPokemon.IniciaJogoConsole();
 
-            //foreach(CarD c in lista)
-            //{
-            //    Console.WriteLine(c.Pk.Nome);
-
-            //}
-            
             Console.Read();
 
         }

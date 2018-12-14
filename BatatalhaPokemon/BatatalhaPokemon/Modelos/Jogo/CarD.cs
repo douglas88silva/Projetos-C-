@@ -66,23 +66,23 @@ namespace BatatalhaPokemon
                         if (Pk.Evolucao > 0)
                         {
                             //fazendo a troca do pokemon para sua evolucao
-                            Console.WriteLine("\n\nOps... Parece que o " + Pk.Nome + " vai evoluir!");
+                             Console.WriteLine("\n\nOps... Parece que o " + Pk.Nome + " vai evoluir!");
 
                                                                                     
                             Pk = cartasDiponiveis[IndexOfCardID(IDCard,cartasDiponiveis)+1].Pk;
                             base.Evolucao();
 
-                            Console.WriteLine("Parabens! seu pokemon evoluiu para " + this.Pk.Nome);
-                            //Program.PausarAplicacao();
+                             Console.WriteLine("Parabens! seu pokemon evoluiu para " + this.Pk.Nome);
+                            //Program.Program.Program.PausarAplicacao();
                         }
                         totalEvolucao--;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("ops... Seu pokemon acaba de subir para o level " + base.LevelAtual);
+                     Console.WriteLine("ops... Seu pokemon acaba de subir para o level " + base.LevelAtual);
                     Pk.BonusLevel(base.BonusAtributoLevel);
-                    //Program.PausarAplicacao();
+                    //Program.Program.Program.PausarAplicacao();
                     
                 }
 
@@ -95,7 +95,24 @@ namespace BatatalhaPokemon
             return Pk.Nome;
         }
 
-        public CarD createNewCardPokemon(int nivel)
+
+        public CarD CreateNewCardPokemon()
+        {
+
+            int idCard = IDCard;
+            String nomePk = Pk.Nome;
+            String tipoPK = Pk.Tipo;
+            int ataquePK = Pk.Ataque;
+            int evolucaoPK = Pk.Evolucao;
+
+            CarD aux = new CarD(idCard, nomePk, tipoPK, ataquePK, evolucaoPK);
+
+            return aux;
+
+        }
+
+
+        public CarD CreateNewCardPokemon(int nivel)
         {
 
             int idPk = this.IDCard;

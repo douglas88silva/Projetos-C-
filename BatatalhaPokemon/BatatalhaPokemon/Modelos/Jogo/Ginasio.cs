@@ -10,14 +10,14 @@ namespace BatatalhaPokemon
 {
     public class Ginasio
     {
-        public static int Id { get; private set; }
+        public static int Id { get; private set; } = 0;
         public String Nome { get; set; }
         public int Nivel { get; set; }
         public List<Jogador> Treinadores { get; set; }
         public bool Vencido { get; set; }
 
 
-        public Ginasio(String nome, List<CarD> cartasDisponiveis)
+        public Ginasio(String nome, List<CarD> Cartas)
         {
 
             Id++;
@@ -33,13 +33,15 @@ namespace BatatalhaPokemon
                 String adversario = "NPC_" + (j + 1);
 
                 Jogador ad = new Jogador(adversario);
-                ad.AddDeckPokemon((CarD)cartasDisponiveis[r.Next(cartasDisponiveis.Count())].createNewCardPokemon(Nivel));//pegar aleatoriamente
+                CarD card = Cartas[r.Next(Cartas.Count())].CreateNewCardPokemon(Nivel);
+
+                ad.AddDeckPokemon(card);//pegar aleatoriamente
                 Treinadores.Add(ad);
                 j++;
             }
         }
 
-        public void AtualizaPokemonsGinasio(List<CarD> cartasDisponiveis)
+        public void AtualizaPokemonsGinasio(List<CarD> Cartas)
         {
             Random r = new Random();
             foreach (Jogador treinadores in Treinadores)
@@ -48,7 +50,7 @@ namespace BatatalhaPokemon
                 if (Vencido)
                 {
                     treinadores.MinhasCartas.Clear();
-                    treinadores.AddDeckPokemon((CarD)cartasDisponiveis[r.Next(cartasDisponiveis.Count())].createNewCardPokemon(Nivel++));//pegar aleatoriamente
+                    treinadores.AddDeckPokemon((CarD)Cartas[r.Next(Cartas.Count())].CreateNewCardPokemon(Nivel++));//pegar aleatoriamente
 
                     Vencido = false;
                 }
@@ -58,7 +60,7 @@ namespace BatatalhaPokemon
                     {
                         Nivel--;
                         treinadores.MinhasCartas.Clear();
-                        treinadores.AddDeckPokemon((CarD)cartasDisponiveis[r.Next(cartasDisponiveis.Count())].createNewCardPokemon(this.Nivel));//pegar aleatoriamente
+                        treinadores.AddDeckPokemon((CarD)Cartas[r.Next(Cartas.Count())].CreateNewCardPokemon(this.Nivel));//pegar aleatoriamente
 
                     }
                 }
@@ -71,11 +73,11 @@ namespace BatatalhaPokemon
         {
 
 
-            Console.WriteLine("---ADVERSARIO     ||    POKEMONS---");
+             Console.WriteLine("---ADVERSARIO     ||    POKEMONS---");
             foreach (Jogador c in Treinadores)
             {
 
-                Console.WriteLine(c.Nome+ "  -  " + c.PokemonPrincipal.Nome());
+                 Console.WriteLine(c.Nome+ "  -  " + c.PokemonPrincipal.Nome());
             }
 
         }

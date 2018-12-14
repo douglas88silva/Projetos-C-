@@ -22,7 +22,7 @@ namespace BatatalhaPokemon
 
         public override void Atacar(Pokemon adversario)
         {
-            Console.WriteLine(base.Nome + " usou " + NomeAtaque + " no " + adversario.Nome);
+             Console.WriteLine(base.Nome + " usou " + NomeAtaque + " no " + adversario.Nome);
 
             if (adversario.HPCombate > 0)
             {

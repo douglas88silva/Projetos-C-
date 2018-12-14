@@ -16,12 +16,13 @@ namespace BatatalhaPokemon
         public Jogador(string nome)
         {
             Nome = nome;
+            MinhasCartas = new List<CarD>();
         }
 
-        public void AddDeckPokemon(CarD pk)
+        public void AddDeckPokemon(CarD card)
         {
 
-            MinhasCartas.Add(pk);
+            MinhasCartas.Add(card);
 
             if (MinhasCartas.Count == 1)
             {
@@ -81,14 +82,14 @@ namespace BatatalhaPokemon
                 if (!local)
                 {
                     this.PokemonPrincipal = MinhasCartas[indexOf];
-                    Console.WriteLine("Seu novo pokemon principal e " + PokemonPrincipal.Pk.Nome);
+                     Console.WriteLine("Seu novo pokemon principal e " + PokemonPrincipal.Pk.Nome);
                 }
 
                 Program.PausarAplicacao();
             }
             else
             {
-                Console.WriteLine("Nao foi possivel encontrar o pokemon de id= " + idCard);
+                 Console.WriteLine("Nao foi possivel encontrar o pokemon de id= " + idCard);
 
             }
 

@@ -47,7 +47,7 @@ namespace BatatalhaPokemon
             }
         }
 
-        public void restaurarHp()
+        public void RestaurarHp()
         {
 
             HPCombate = Vida;
